@@ -5,7 +5,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import PrivateRoutes from './utils/PrivateRoutes'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <ArpNavBar />

@@ -1,7 +1,15 @@
-import { Container, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap'
+import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap'
 import LogoArp from '../assets/images/logo.png'
+import AnimatedText from '../utils/AnimatedText';
 
-function ArpNavBar() {
+const ArpNavBar = () => {
+
+    const animatedProps = {
+        type: "chars",
+        text: "Menú",
+        animationType: "wave"
+    }
+
     return (
         <>
             <Navbar key="xxl" bg="dark" expand="xxl" className="mb-3" variant="dark">
@@ -25,7 +33,7 @@ function ArpNavBar() {
                     >
                         <Offcanvas.Header closeButton className="bg-warning text-dark">
                             <Offcanvas.Title id="offcanvasNavbarLabel-expand-xxl">
-                                Menú
+                                <AnimatedText {...animatedProps}></AnimatedText>
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
