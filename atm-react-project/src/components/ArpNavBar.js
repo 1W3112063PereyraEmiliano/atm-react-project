@@ -1,6 +1,9 @@
 import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap'
 import LogoArp from '../assets/images/logo.png'
 import AnimatedText from '../utils/AnimatedText';
+import { MdExitToApp } from "react-icons/md";
+import { MdInfoOutline } from "react-icons/md";
+
 
 const ArpNavBar = () => {
 
@@ -38,8 +41,8 @@ const ArpNavBar = () => {
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
-                                <Nav.Link href="#action1">Ingresar</Nav.Link>
-                                <Nav.Link href="#action2">Acerca de</Nav.Link>
+                                <Nav.Link href="#action1"><MdExitToApp className='d-xxl-none'/> Ingresar</Nav.Link>
+                                <Nav.Link href="#action2"><MdInfoOutline className='d-xxl-none'/> Acerca de</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
