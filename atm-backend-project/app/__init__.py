@@ -3,10 +3,12 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_bcrypt import Bcrypt
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.config.from_object('config.DevConfiguration')
 app.secret_key = app.config.get('SECRET_KEY')
+cors = CORS(app, resources={r"/api/*": {"origins": app.config.get('ORIGINS_URL')}}, supports_credentials = True)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
